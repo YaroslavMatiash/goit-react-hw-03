@@ -17,9 +17,9 @@ const validationSchema = Yup.object().shape({
 });
 
 const initialValues = {
-   username: '',
-   email: '',
+   name: '',
    number: '',
+   id: '',
 };
 
 function ContactForm({ onContactAdd }) {
@@ -29,7 +29,7 @@ function ContactForm({ onContactAdd }) {
 
 return (
      <Formik
-      initialValues={{initialValues}}
+      initialValues={initialValues}
 
       validationSchema={validationSchema}
       onSubmit={(values, actions) => {
